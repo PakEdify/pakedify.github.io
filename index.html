@@ -1,252 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>PakEdify — Proudly Local, Proudly Ethical</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PakEdify</title>
   <style>
-      <footer style="background-color: #f5f5f5; padding: 20px 0; text-align: center; font-size: 14px; color: #555; margin-top: 50px;">
-    <p>© PakEdify <span id="year"></span>. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Auto-update year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
-    nav {
-      background-color: #003366;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+
+    header {
+      background-color: #005792;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
     }
+
     nav a {
-      color: white;
+      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
     }
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    #services {
+      background-color: #e8f4fd;
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 3px solid #007ACC;
+      border-bottom: 3px solid #007ACC;
     }
-    .box {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-top: 2rem;
+
+    .scrolling-text {
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+      font-size: 1.1em;
+      color: #005792;
     }
-    h1 {
-      color: #003366;
+
+    .scrolling-text span {
+      margin: 0 30px;
+      display: inline-block;
     }
-    .tagline {
-      font-style: italic;
-      color: #777;
-      margin-bottom: 20px;
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
-    ul {
-  padding-left: 1.5rem;
-  line-height: 1.8;
-}
+
+    #contact {
+      background-color: #d1eaff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      color: #005792;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
     input, textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
 
-button {
-  padding: 0.6rem 1.2rem;
-  background-color: #003366;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    button {
+      background-color: #007ACC;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
 
-button:hover {
-  background-color: #0055aa;
-}
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
-    padding: 10px;
-  }
-
-  .hero p {
-    font-size: 16px;
-    padding: 0 15px;
-  }
-
-  .about-card {
-    padding: 20px;
-    margin: 10px;
-    font-size: 15px;
-  }
-
-  footer {
-    font-size: 13px;
-    padding: 15px 10px;
-  }
-}
-
+    button:hover {
+      background-color: #005792;
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVIGATION BAR -->
-<nav style="background-color: #007BFF; display: flex; align-items: center; padding: 0 20px; height: 60px;">
-  <img src="pe2.png" alt="PakEdify Logo" style="height: 100%; margin-right: 20px;">
-  <a href="#home" style="color: white; text-decoration: none; margin-right: 20px;">Home</a>
-  <a href="#services" style="color: white; text-decoration: none; margin-right: 20px;">Services</a>
-  <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
-</nav>
-<section id="about" style="display: flex; justify-content: center; padding: 2rem; background-color: #f9f9f9;">
-  <div style="max-width: 700px; background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif;">
-    <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;">Built for Pakistan’s next generation</h2>
-    <p style="font-size: 1.1rem; color: #555;">
-      <strong>PakEdify</strong> isn’t just another study help site — it’s Pakistan’s own academic ally.
-    </p>
-    <p style="font-size: 1.1rem; color: #555; margin-top: 1rem;">
-      Tired of overpriced, dollar-based platforms? <strong>Pay in PKR</strong> — often at <strong>half the market rate</strong>.
-    </p>
-    <p style="font-size: 1.1rem; color: #555; margin-top: 1rem;">
-      Worried about ghosting freelancers? Not here. Our experts are <strong>verified, paid, and managed directly</strong> — no middlemen, no scams.
-    </p>
-    <p style="font-size: 1.2rem; color: #333; margin-top: 1.5rem;">
-      📌 Assignments | 📊 Presentations | 💻 MATLAB & CAD | ✈️ Study Abroad Docs
-    </p>
-    <p style="font-size: 1.1rem; font-weight: bold; color: #16a085; margin-top: 1rem;">
-      🎓 Built for students. Backed by professionals. Powered by trust.
-    </p>
-  </div>
-<!-- WHAT WE OFFER - AUTO SCROLLING -->
-<section id="services" style="padding: 50px 0; background-color: #eef6fc; overflow: hidden;">
-  <h2 style="text-align: center; font-size: 2.2em; color: #0a4d94; margin-bottom: 30px;">✨ What We Offer</h2>
-  <div style="white-space: nowrap; overflow: hidden; position: relative;">
-    <div id="scrolling-text" style="display: inline-block; animation: scroll-left 25s linear infinite; font-size: 1.2em; color: #0a4d94;">
-      <span style="margin-right: 80px;">🧠 AI-Enhanced Research & Technical Writing</span>
-      <span style="margin-right: 80px;">📊 Data Analysis, Visualization & Simulation</span>
-      <span style="margin-right: 80px;">🌐 Custom Website & App Development</span>
-      <span style="margin-right: 80px;">📄 CV, Portfolio & Document Design</span>
-      <span style="margin-right: 80px;">🛠️ Arduino, MATLAB & CAD Modeling</span>
-      <span style="margin-right: 80px;">📚 Academic & Final Year Project Help</span>
+  <!-- Header -->
+  <header>
+    <h1>PakEdify</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">What We Offer</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team offering affordable online services in education, research, software, and design domains.</p>
+  </section>
+
+  <!-- What We Offer Section (Auto-scrolling) -->
+  <section id="services">
+    <div class="scrolling-text">
+      <span>📊 Data Analysis</span>
+      <span>📄 Research & Reports</span>
+      <span>🧪 Academic Writing</span>
+      <span>📱 App Prototyping</span>
+      <span>🎨 Graphic Design</span>
+      <span>📚 PowerPoint/Docs</span>
+      <span>💻 Web Development</span>
+      <span>📐 CAD Modeling</span>
+      <span>🔍 Literature Reviews</span>
+      <span>📑 Assignments Help</span>
+      <span>💼 CV/Resume Design</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-@keyframes scroll-left {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-</style>
-
-
-  <!-- TESTIMONIALS SECTION -->
-<section id="testimonials" style="padding: 40px 20px; background-color: #f9f9f9;">
-  <h2 style="text-align: center; font-size: 2em; margin-bottom: 30px;">What Students Say</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-    <!-- Testimonial Card 1 -->
-    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <p style="font-style: italic;">"PakEdify helped me finish my MATLAB project just in time! Affordable and reliable."</p>
-      <p style="margin-top: 15px; font-weight: bold;">— Ali R., NUST</p>
-    </div>
-
-    <!-- Testimonial Card 2 -->
-    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <p style="font-style: italic;">"Finally a platform where I can pay in PKR and trust the process. No ghosting, no stress."</p>
-      <p style="margin-top: 15px; font-weight: bold;">— Fatima A., LUMS</p>
-    </div>
-
-    <!-- Testimonial Card 3 -->
-    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <p style="font-style: italic;">"Got my visa SOP reviewed by a real expert. Worth every rupee!"</p>
-      <p style="margin-top: 15px; font-weight: bold;">— Usman T., FAST</p>
-    </div>
-
-  </div>
-</section>
-<!-- CONTACT SECTION -->
-<section id="contact" style="padding: 40px 20px; background-color: #ffffff;">
-  <h2 style="text-align: center; font-size: 2em; margin-bottom: 30px;">📬 Contact Us</h2>
-  <form action="https://formsubmit.co/pakedify@gmail.com" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-
-    <!-- Hide captcha and redirect after submission -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-    <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-    <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-
-    <button type="submit" style="background-color: #007bff; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
-  </form>
-</section>
-
-</section>
-
-  <div class="container">
-
-    <div class="box" id="home">
-      <h1>Welcome to PakEdify</h1>
-      <p class="tagline">Proudly Local. Proudly Ethical.</p>
-      <p>Sick of AI answers that miss the point? Fed up with dollar-priced platforms?</p>
-      <p><strong>PakEdify</strong> is your trusted academic support system — where real experts are verified, managed, and paid through us. No middlemen. No scams.</p>
-      <p>From last-minute assignments to polished presentations, software projects to study abroad documents — everything you need, all in one place.</p>
-      <p>🚧 More features coming soon!</p>
-    </div>
-  <div style="
-  display: inline-block;
-  animation: marquee 20s linear infinite;
-  font-size: 1.2em;
-  padding: 10px 0;
-  color: #333;">
-  🧠 AI-powered Content Writing & Research &nbsp;&nbsp;&nbsp;&nbsp;
-  📊 Data Analysis & Visualization &nbsp;&nbsp;&nbsp;&nbsp;
-  🌐 Website & App Development &nbsp;&nbsp;&nbsp;&nbsp;
-  📄 Resume & Document Designing &nbsp;&nbsp;&nbsp;&nbsp;
-  🧪 Academic & Technical Projects &nbsp;&nbsp;&nbsp;&nbsp;
-  🛠️ Arduino, MATLAB & CAD Modeling
-</div>
-
-
-
-        <div class="box" id="contact">
-      <h2>Contact Us</h2>
-      <p>Have a request or question? Send us a message below:</p>
-      <form action="https://formsubmit.co/pakedify@gmail.com" method="POST">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Your Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-
-  </div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Let's Work Together</h2>
+    <p>Interested in working with us or need a custom service?</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
 </body>
 </html>
-
