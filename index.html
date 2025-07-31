@@ -137,41 +137,28 @@ button:hover {
       🎓 Built for students. Backed by professionals. Powered by trust.
     </p>
   </div>
-</section>
-<section class="scrolling-services" style="background-color: #eef3f9; padding: 20px 0;">
-  <div style="overflow: hidden; white-space: nowrap;">
-    <div id="serviceScroller" style="display: inline-block; animation: scrollServices 25s linear infinite;">
-      
-      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
-        <h3>Website & App Development</h3>
-        <p style="font-size: 14px;">Responsive sites, Android apps, dashboards — fully custom</p>
-      </div>
-
-      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
-        <h3>Academic Projects & Coding</h3>
-        <p style="font-size: 14px;">From Arduino to MATLAB & Python — we do your project</p>
-      </div>
-
-      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
-        <h3>Study Abroad Writing Help</h3>
-        <p style="font-size: 14px;">SoP, CV, LOR, proposal — reviewed by research experts</p>
-      </div>
-
-      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
-        <h3>Custom Online Tasks</h3>
-        <p style="font-size: 14px;">Any online job: document design, analysis, research etc.</p>
-      </div>
-
+<!-- WHAT WE OFFER - AUTO SCROLLING -->
+<section id="services" style="padding: 50px 0; background-color: #eef6fc; overflow: hidden;">
+  <h2 style="text-align: center; font-size: 2.2em; color: #0a4d94; margin-bottom: 30px;">✨ What We Offer</h2>
+  <div style="white-space: nowrap; overflow: hidden; position: relative;">
+    <div id="scrolling-text" style="display: inline-block; animation: scroll-left 25s linear infinite; font-size: 1.2em; color: #0a4d94;">
+      <span style="margin-right: 80px;">🧠 AI-Enhanced Research & Technical Writing</span>
+      <span style="margin-right: 80px;">📊 Data Analysis, Visualization & Simulation</span>
+      <span style="margin-right: 80px;">🌐 Custom Website & App Development</span>
+      <span style="margin-right: 80px;">📄 CV, Portfolio & Document Design</span>
+      <span style="margin-right: 80px;">🛠️ Arduino, MATLAB & CAD Modeling</span>
+      <span style="margin-right: 80px;">📚 Academic & Final Year Project Help</span>
     </div>
   </div>
 </section>
 
 <style>
-@keyframes scrollServices {
-  0% { transform: translateX(0); }
+@keyframes scroll-left {
+  0%   { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
 </style>
+
 
   <!-- TESTIMONIALS SECTION -->
 <section id="testimonials" style="padding: 40px 20px; background-color: #f9f9f9;">
@@ -225,41 +212,20 @@ button:hover {
       <p>From last-minute assignments to polished presentations, software projects to study abroad documents — everything you need, all in one place.</p>
       <p>🚧 More features coming soon!</p>
     </div>
-   <section class="services">
-  <div class="max-width">
-    <h2 class="title">What We Offer</h2>
-    <div class="serv-content">
-      <div class="card">
-        <div class="box">
-          <i class="fas fa-laptop-code"></i>
-          <div class="text">Final Year Project</div>
-          <p>We provide complete support in planning, executing and documenting your final year projects (FYPs) for engineering, CS, and biomedical students.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <i class="fas fa-file-alt"></i>
-          <div class="text">Assignments & Reports</div>
-          <p>We help students in writing well-researched assignments, lab reports, and technical documents with proper formatting and citations.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <i class="fas fa-user-graduate"></i>
-          <div class="text">Study Abroad Help</div>
-          <p>Our services include SOP writing, CV editing, and research proposals for scholarships, MS & PhD admissions worldwide.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="box">
-          <i class="fas fa-cogs"></i>
-          <div class="text">Custom Services</div>
-          <p>If it's online and useful, we probably do it. Just contact us with your unique task or digital request.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <div style="
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  font-size: 1.2em;
+  padding: 10px 0;
+  color: #333;">
+  🧠 AI-powered Content Writing & Research &nbsp;&nbsp;&nbsp;&nbsp;
+  📊 Data Analysis & Visualization &nbsp;&nbsp;&nbsp;&nbsp;
+  🌐 Website & App Development &nbsp;&nbsp;&nbsp;&nbsp;
+  📄 Resume & Document Designing &nbsp;&nbsp;&nbsp;&nbsp;
+  🧪 Academic & Technical Projects &nbsp;&nbsp;&nbsp;&nbsp;
+  🛠️ Arduino, MATLAB & CAD Modeling
+</div>
+
 
 
         <div class="box" id="contact">
