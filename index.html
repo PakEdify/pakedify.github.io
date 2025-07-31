@@ -138,34 +138,41 @@ button:hover {
     </p>
   </div>
 </section>
-<section id="services" style="padding: 60px 20px; background-color: #f9f9f9;">
-  <h2 style="text-align:center; font-size: 2rem; margin-bottom: 30px;">What We Offer</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: auto;">
+<section class="scrolling-services" style="background-color: #eef3f9; padding: 20px 0;">
+  <div style="overflow: hidden; white-space: nowrap;">
+    <div id="serviceScroller" style="display: inline-block; animation: scrollServices 25s linear infinite;">
+      
+      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
+        <h3>Website & App Development</h3>
+        <p style="font-size: 14px;">Responsive sites, Android apps, dashboards — fully custom</p>
+      </div>
 
-    <!-- Card 1 -->
-    <div style="flex: 1 1 200px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="margin-bottom: 10px;">📌 Assignments</h3>
-      <p>Custom, clear, and on time — from engineering to humanities.</p>
-    </div>
+      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
+        <h3>Academic Projects & Coding</h3>
+        <p style="font-size: 14px;">From Arduino to MATLAB & Python — we do your project</p>
+      </div>
 
-    <!-- Card 2 -->
-    <div style="flex: 1 1 200px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="margin-bottom: 10px;">📊 Presentations</h3>
-      <p>Well-researched, designed, and delivery-ready slides.</p>
-    </div>
+      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
+        <h3>Study Abroad Writing Help</h3>
+        <p style="font-size: 14px;">SoP, CV, LOR, proposal — reviewed by research experts</p>
+      </div>
 
-    <!-- Card 3 -->
-    <div style="flex: 1 1 200px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="margin-bottom: 10px;">💻 MATLAB & CAD</h3>
-      <p>Technical help in simulations, modeling, and engineering tools.</p>
-    </div>
+      <div style="display: inline-block; min-width: 250px; margin: 0 20px; background-color: white; padding: 15px; border-radius: 8px;">
+        <h3>Custom Online Tasks</h3>
+        <p style="font-size: 14px;">Any online job: document design, analysis, research etc.</p>
+      </div>
 
-    <!-- Card 4 -->
-    <div style="flex: 1 1 200px; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="margin-bottom: 10px;">✈️ Study Abroad Docs</h3>
-      <p>SOPs, CVs, cover letters — tailored to your goals.</p>
     </div>
   </div>
+</section>
+
+<style>
+@keyframes scrollServices {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+
   <!-- TESTIMONIALS SECTION -->
 <section id="testimonials" style="padding: 40px 20px; background-color: #f9f9f9;">
   <h2 style="text-align: center; font-size: 2em; margin-bottom: 30px;">What Students Say</h2>
@@ -218,32 +225,42 @@ button:hover {
       <p>From last-minute assignments to polished presentations, software projects to study abroad documents — everything you need, all in one place.</p>
       <p>🚧 More features coming soon!</p>
     </div>
-   <section id="services" style="padding: 40px 20px; background-color: #f5f5f5;">
-  <h2 style="text-align: center; color: #003366;">What We Offer</h2>
-  <div style="max-width: 1000px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px;">
-    
-    <div style="background-color: white; padding: 20px; border-radius: 8px;">
-      <h3>Academic Help</h3>
-      <p>Assignments, Projects, Thesis & Reports (BS/MS/PhD)</p>
+   <section class="services">
+  <div class="max-width">
+    <h2 class="title">What We Offer</h2>
+    <div class="serv-content">
+      <div class="card">
+        <div class="box">
+          <i class="fas fa-laptop-code"></i>
+          <div class="text">Final Year Project</div>
+          <p>We provide complete support in planning, executing and documenting your final year projects (FYPs) for engineering, CS, and biomedical students.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <i class="fas fa-file-alt"></i>
+          <div class="text">Assignments & Reports</div>
+          <p>We help students in writing well-researched assignments, lab reports, and technical documents with proper formatting and citations.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <i class="fas fa-user-graduate"></i>
+          <div class="text">Study Abroad Help</div>
+          <p>Our services include SOP writing, CV editing, and research proposals for scholarships, MS & PhD admissions worldwide.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <i class="fas fa-cogs"></i>
+          <div class="text">Custom Services</div>
+          <p>If it's online and useful, we probably do it. Just contact us with your unique task or digital request.</p>
+        </div>
+      </div>
     </div>
-
-    <div style="background-color: white; padding: 20px; border-radius: 8px;">
-      <h3>Website & App Development</h3>
-      <p>Portfolio sites, dashboards, store apps, custom tools</p>
-    </div>
-
-    <div style="background-color: white; padding: 20px; border-radius: 8px;">
-      <h3>Study Abroad Services</h3>
-      <p>SoPs, CVs, Personal Statements, Research Proposals</p>
-    </div>
-
-    <div style="background-color: white; padding: 20px; border-radius: 8px;">
-      <h3>Custom Services</h3>
-      <p>Have a digital task in mind? Just tell us — we can do it!</p>
-    </div>
-
   </div>
 </section>
+
 
         <div class="box" id="contact">
       <h2>Contact Us</h2>
