@@ -2,150 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>PakEdify — Proudly Local, Proudly Ethical</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PakEdify</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
     }
-
-    header {
-      background-color: #0056b3;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
+    nav {
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
     }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
+    nav a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    h1, h2, h3 {
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+    h1 {
+      color: #003366;
+    }
+    .tagline {
+      font-style: italic;
+      color: #777;
       margin-bottom: 20px;
-      color: #333;
     }
-
-    p {
-      color: #666;
-      font-size: 18px;
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.8;
     }
-
-    .highlight {
-      color: #0056b3;
-      font-weight: bold;
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
-
-    #what-we-offer {
-      background-color: #ffffff;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      padding: 40px 0;
-      border-top: 2px solid #ddd;
-      border-bottom: 2px solid #ddd;
+    button {
+      padding: 0.6rem 1.2rem;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-
-    #what-we-offer h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #333;
+    button:hover {
+      background-color: #0055aa;
     }
-
-    .scrolling-container {
-      display: inline-block;
-      animation: scrollLeft 25s linear infinite reverse;
-    }
-
-    @keyframes scrollLeft {
-      0% {
-        transform: translateX(100%);
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+        padding: 10px;
       }
-      100% {
-        transform: translateX(-100%);
+
+      .hero p {
+        font-size: 16px;
+        padding: 0 15px;
+      }
+
+      .about-card {
+        padding: 20px;
+        margin: 10px;
+        font-size: 15px;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 15px 10px;
       }
     }
 
-    .scrolling-container span {
-      display: inline-block;
-      margin: 0 50px;
-      font-size: 20px;
-      color: #007bff;
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
-
   </style>
 </head>
 <body>
 
-<header>
-  <h1>PakEdify</h1>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">What We Offer</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- NAVIGATION BAR -->
+<nav style="background-color: #007BFF; display: flex; align-items: center; padding: 0 20px; height: 60px;">
+  <img src="pe2.png" alt="PakEdify Logo" style="height: 100%; margin-right: 20px;">
+  <a href="#home" style="color: white; text-decoration: none; margin-right: 20px;">Home</a>
+  <a href="#services" style="color: white; text-decoration: none; margin-right: 20px;">Services</a>
+  <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+</nav>
 
-<!-- About Section -->
-<section id="about">
-  <h2>Welcome to PakEdify</h2>
-  <p>Empowering <span class="highlight">Pakistani students</span> through <span class="highlight">free mentorship</span>, <span class="highlight">research</span>, and <span class="highlight">earning opportunities</span>.</p>
+<!-- ABOUT SECTION -->
+<section id="about" style="display: flex; justify-content: center; padding: 2rem; background-color: #f9f9f9;">
+  <div style="max-width: 700px; background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif;">
+    <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;">Built for Pakistan’s next generation</h2>
+    <p style="font-size: 1.1rem; color: #555;"><strong>PakEdify</strong> isn’t just another study help site — it’s Pakistan’s own academic ally.</p>
+    <p style="font-size: 1.1rem; color: #555; margin-top: 1rem;">Tired of overpriced, dollar-based platforms? <strong>Pay in PKR</strong> — often at <strong>half the market rate</strong>.</p>
+    <p style="font-size: 1.1rem; color: #555; margin-top: 1rem;">Worried about ghosting freelancers? Not here. Our experts are <strong>verified, paid, and managed directly</strong> — no middlemen, no scams.</p>
+    <p style="font-size: 1.2rem; color: #333; margin-top: 1.5rem;">📌 Assignments | 📊 Presentations | 💻 MATLAB & CAD | ✈️ Study Abroad Docs</p>
+    <p style="font-size: 1.1rem; font-weight: bold; color: #16a085; margin-top: 1rem;">🎓 Built for students. Backed by professionals. Powered by trust.</p>
+  </div>
 </section>
 
 <!-- WHAT WE OFFER - AUTO SCROLLING -->
-<section id="services">
-  <h2>What We Offer 🚀</h2>
-  <div id="what-we-offer">
-    <div class="scrolling-container">
-      <span>Research Guidance 📚</span>
-      <span>Assignments Assistance 📝</span>
-      <span>Academic Project Help 🔧</span>
-      <span>Document Designing 📄</span>
-      <span>CV/Resume/LinkedIn Optimization 💼</span>
-      <span>MATLAB Simulations 📊</span>
-      <span>CAD Modelling 📐</span>
-      <span>Fiverr & Earning Mentorship 💰</span>
-      <span>Professional Writing ✍️</span>
-      <span>Web Development 🌐</span>
-      <span>App Building 📱</span>
-      <span>And More… ✨</span>
+<section id="services" style="padding: 50px 0; background-color: #eef6fc; overflow: hidden;">
+  <h2 style="text-align: center; font-size: 2.2em; color: #0a4d94; margin-bottom: 30px;">✨ What We Offer</h2>
+  <div style="white-space: nowrap; overflow: hidden; position: relative;">
+    <div id="scrolling-text" style="display: inline-block; animation: scroll-left 25s linear infinite; font-size: 1.2em; color: #0a4d94;">
+      <span style="margin-right: 80px;">🧠 AI-Enhanced Research & Technical Writing</span>
+      <span style="margin-right: 80px;">📊 Data Analysis, Visualization & Simulation</span>
+      <span style="margin-right: 80px;">🌐 Custom Website & App Development</span>
+      <span style="margin-right: 80px;">📄 CV, Portfolio & Document Design</span>
+      <span style="margin-right: 80px;">🛠️ Arduino, MATLAB & CAD Modeling</span>
+      <span style="margin-right: 80px;">📚 Academic & Final Year Project Help</span>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:pakedify@gmail.com">pakedify@gmail.com</a></p>
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 30px;">What Students Say</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p style="font-style: italic;">"PakEdify helped me finish my MATLAB project just in time! Affordable and reliable."</p>
+      <p style="margin-top: 15px; font-weight: bold;">— Ali R., NUST</p>
+    </div>
+    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p style="font-style: italic;">"Finally a platform where I can pay in PKR and trust the process. No ghosting, no stress."</p>
+      <p style="margin-top: 15px; font-weight: bold;">— Fatima A., LUMS</p>
+    </div>
+    <div style="background-color: white; border-radius: 10px; padding: 20px; max-width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <p style="font-style: italic;">"Got my visa SOP reviewed by a real expert. Worth every rupee!"</p>
+      <p style="margin-top: 15px; font-weight: bold;">— Usman T., FAST</p>
+    </div>
+  </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" style="padding: 40px 20px; background-color: #ffffff;">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 30px;">📬 Contact Us</h2>
+  <form action="https://formsubmit.co/pakedify@gmail.com" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- HOME SECTION -->
+<div class="container">
+  <div class="box" id="home">
+    <h1>Welcome to PakEdify</h1>
+    <p class="tagline">Proudly Local. Proudly Ethical.</p>
+    <p>Sick of AI answers that miss the point? Fed up with dollar-priced platforms?</p>
+    <p><strong>PakEdify</strong> is your trusted academic support system — where real experts are verified, managed, and paid through us. No middlemen. No scams.</p>
+    <p>From last-minute assignments to polished presentations, software projects to study abroad documents — everything you need, all in one place.</p>
+    <p>🚧 More features coming soon!</p>
+  </div>
+</div>
+
+<!-- MARQUEE-LIKE TEXT -->
+<div style="display: inline-block; animation: marquee 20s linear infinite; font-size: 1.2em; padding: 10px 0; color: #333;">
+  🧠 AI-powered Content Writing & Research &nbsp;&nbsp;&nbsp;&nbsp;
+  📊 Data Analysis & Visualization &nbsp;&nbsp;&nbsp;&nbsp;
+  🌐 Website & App Development &nbsp;&nbsp;&nbsp;&nbsp;
+  📄 Resume & Document Designing &nbsp;&nbsp;&nbsp;&nbsp;
+  🧪 Academic & Technical Projects &nbsp;&nbsp;&nbsp;&nbsp;
+  🛠️ Arduino, MATLAB & CAD Modeling
+</div>
+
+<!-- FOOTER -->
 <footer style="background-color: #f5f5f5; padding: 20px 0; text-align: center; font-size: 14px; color: #555; margin-top: 50px;">
   <p>© PakEdify <span id="year"></span>. All rights reserved.</p>
 </footer>
 
 <script>
-  // Auto-update year
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
